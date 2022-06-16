@@ -9,7 +9,7 @@ pygame.display.set_caption("Pong")
 # Frames Per Second in the game
 FPS = 60
 
-#C olor RGB
+# Color RGB
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
@@ -43,6 +43,12 @@ def draw(win, paddles):
     # Drawing the paddles in the window
     for paddle in paddles:
         paddle.draw(win)
+
+    # Drawing a line in the middle
+    for i in range(10, HEIGHT, HEIGHT//20):
+        if i % 2 == 1:
+            continue
+        pygame.draw.rect(win, WHITE, (WIDTH//2 - 5, i, 10, HEIGHT//20))
 
     pygame.display.update()
 
