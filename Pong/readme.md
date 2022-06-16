@@ -5,5 +5,5 @@ Movement:\
 Left paddle: W and S\
 Right paddle: Arrow keys up and down\
 
-Need to install pygame to get this to work with:\
+Need to install pygame to get this game to work by running this in the terminal:\
 pip install pygame
