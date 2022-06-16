@@ -13,6 +13,8 @@ FPS = 60
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
+PADDLE_WIDTH, PADDLE_HEIGHT = 20, 100
+
 class Paddle:
     COLOR = WHITE
 
@@ -23,27 +25,38 @@ class Paddle:
         self.height = height
 
     def draw(self, win):
-        pygame.draw.rectangle(win, self.COLOR, ())
+        pygame.draw.rect(win, self.COLOR, (self.x, self.y, self.width, self.height))
 
-def draw(win):
+def draw(win, paddles):
     #Filling the entire window with black color
     win.fill(BLACK)
+
+    for paddle in paddles:
+        paddle.draw(win)
+
     pygame.display.update()
 
 def main():
     run = True
     clock = pygame.time.Clock()
 
+    # Posistion of the paddles
+    left_paddle = Paddle(10, HEIGHT //2 - PADDLE_HEIGHT//2, PADDLE_WIDTH, PADDLE_HEIGHT)
+    right_paddle = Paddle(WIDTH - 10 - PADDLE_WIDTH, HEIGHT //2 - PADDLE_HEIGHT//2, PADDLE_WIDTH, PADDLE_HEIGHT)
+
+
+
+
     while run:
         clock.tick(FPS)
-        draw(WIN)
+        draw(WIN, [left_paddle, right_paddle])
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
                 break
 
-pygame.quit()
+
 
 if __name__ == '__main__':
     main()
