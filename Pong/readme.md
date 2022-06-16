@@ -9,7 +9,7 @@ Right paddle: Arrow keys up and down\
 Need to install pygame to get this game to work by running this in the terminal:\
 pip install pygame\
 
-WIP:
+WIP:\
 AI\
 Start menu\
 AI VS AI
