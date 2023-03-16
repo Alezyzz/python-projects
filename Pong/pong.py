@@ -278,7 +278,7 @@ if selection == 1:
 
 elif selection == 2:
     # Show instructions
-    # Add your code here
+    # no code yet
     pass
 elif selection == 3:
     # Quit
