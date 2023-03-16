@@ -11,9 +11,9 @@ font = pygame.font.Font(None, 36)
 
 # Define menu items
 menu_items = [
-    {"text": "1. Play Pong", "selected": False},
-    {"text": "2. Instructions", "selected": False},
-    {"text": "3. Quit", "selected": False}
+    {"text": "Play 2-Player Pong", "selected": False},
+    {"text": "Instructions", "selected": False},
+    {"text": "Quit", "selected": False}
 ]
 
 # Define function for displaying the menu
