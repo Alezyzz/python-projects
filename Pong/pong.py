@@ -101,7 +101,7 @@ if selection == 1:
     BALL_RADIUS = 7
 
     SCORE_FONT = pygame.font.SysFont("comicsans", 50)
-    WINNING_SCORE = 10
+    WINNING_SCORE = 5
 
     class Paddle:
         COLOR = WHITE
