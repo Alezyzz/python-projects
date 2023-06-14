@@ -44,3 +44,7 @@ for dir in os.scandir():
                 os.rename(os.getcwd() + '/' + str(Path(dir)), os.getcwd() + '/Other_Folder/' + str(Path(dir)))
     except ValueError:
         print ("Failed to create a new directory called Other. Folder may already exist")
+
+
+if __name__ == "__main__":
+    organizer()
